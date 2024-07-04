@@ -25,7 +25,7 @@ export default function PeliculasScreen() {
             .then(response => response.json())
             .then((datos: { peliculas: Movie[] }) => {
                 setData(datos.peliculas);
-                console.log(datos); // Verifica en la consola que datos se están recibiendo correctamente
+                console.log(datos); 
             })
             .catch(error => {
                 console.error('Error al cargar datos:', error);
@@ -42,7 +42,7 @@ export default function PeliculasScreen() {
             <Text style={styles.texto}>Lista de Películas</Text>
             <FlatList
                 data={data}
-                keyExtractor={(item, index) => index.toString()} // Añade un keyExtractor adecuado si es necesario
+                keyExtractor={(item, index) => index.toString()} 
                 renderItem={({ item }) => (
                     <TouchableOpacity onPress={() => mensaje(item)} style={styles.itemContainer}>
                         <Image source={{ uri: item.enlaces.image }} style={styles.image} />

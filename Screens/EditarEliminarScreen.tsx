@@ -9,7 +9,6 @@ const EditarEliminarScreen = ({ route, navigation }: any) => {
   const [race, setRace] = useState('');
   const [age, setAge] = useState('');
 
-  // Función para cargar datos del usuario por ID
   useEffect(() => {
     if (id) {
       const userRef = ref(db, `users/${id}`);
@@ -20,7 +19,6 @@ const EditarEliminarScreen = ({ route, navigation }: any) => {
           setRace(userData.race || '');
           setAge(userData.age || '');
         } else {
-          // Manejar el caso donde no se encuentra el usuario con el ID especificado
           Alert.alert('Error', 'No se encontraron datos para el ID especificado.');
           navigation.goBack();
         }

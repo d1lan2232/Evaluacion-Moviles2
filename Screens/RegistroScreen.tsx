@@ -17,7 +17,7 @@ const RegistroScreen = ({ navigation }: any) => {
       age: edad
     }).then(() => {
       Alert.alert("Mensaje", "Se ha guardado!");
-      navigation.navigate('Edi-Eli', { // Asegúrate de usar 'EditarEliminar' como se define en la navegación
+      navigation.navigate('Edi-Eli', { 
         id: id,
         name: nombre,
         race: raza,
